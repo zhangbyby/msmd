@@ -1,0 +1,7 @@
+[package]
+name = "msmd"
+version = "0.1.0"
+edition = "2021"
+description = "monster-siren music downloader: https://monster-siren.hypergryph.com/music"
+
+[dependencies]
