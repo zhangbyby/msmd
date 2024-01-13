@@ -2,8 +2,6 @@
 
 ### before release
 
-> files in target folder
-
 ```shell
 cargo run -h
 # 1. init albums meta
