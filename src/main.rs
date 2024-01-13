@@ -164,7 +164,7 @@ fn resolve_dir_names(album_dir: &DirEntry) -> (String, String) {
 async fn create_album_dirs_and_meta() -> Result {
     let mut albums_meta = String::new();
 
-    let meta_path = Path::new("../.albums.json");
+    let meta_path = Path::new(".albums.json");
     if meta_path.exists() && meta_path.is_file() {
         File::open(meta_path).unwrap().read_to_string(&mut albums_meta)?;
     } else {
@@ -220,7 +220,7 @@ async fn init_albums_meta() -> Result {
         .await?
         .json::<Value>()
         .await?;
-    File::create("../.albums.json")?
+    File::create(".albums.json")?
         .write_all(albums["data"].to_string().as_bytes())
         .unwrap();
     Ok(())
